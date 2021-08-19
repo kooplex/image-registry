@@ -1,0 +1,11 @@
+kubectl create namespace image-registry
+
+kubectl create secret tls tls-image-registry -n image-registry \
+  --cert=$PATH/cer \
+  --key=$PATH/key
+
+kubectl apply -f pv-registry.yaml
+kubectl apply -f pvc-registry.yaml
+kubectl apply -f pod-registry.yaml
+kubectl apply -f svc-registry.yaml
+
