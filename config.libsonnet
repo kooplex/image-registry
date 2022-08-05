@@ -1,0 +1,1 @@
+/home/fonok/module-configs/image-registry.libsonnet

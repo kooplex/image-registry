@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-image-registry
+  name: image-registry
   labels:
     pvl: image-registry
 spec:
@@ -14,7 +14,6 @@ spec:
   storageClassName: ""
   mountOptions:
     - hard
-#    - nfsvers=4.1
   nfs:
-    server: ##NFSSERVER##
+    server: veo1.krft
     path: /srv/vols/image_registry
